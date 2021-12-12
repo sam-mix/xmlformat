@@ -8,6 +8,7 @@ import (
 	"regexp"
 	"strings"
 	"sync"
+	"time"
 
 	"github.com/xuri/excelize/v2"
 )
@@ -59,10 +60,15 @@ var (
 )
 
 func main() {
+
+	s := time.Now()
 	// 获取替换规则
 	getReplaceRules()
 	// 替换全部
 	replaceAll()
+
+	e := time.Since(s)
+	fmt.Printf("共耗时 %f 秒 \n", e.Seconds())
 }
 
 func replaceAll() {
@@ -86,7 +92,8 @@ func replace(filePath string, waitGroup *sync.WaitGroup) {
 		content, countText := replaceText(shortFileName, content)
 		if (countName + countText) > 0 {
 			ioutil.WriteFile(strings.ReplaceAll(filePath, oldCfgDataPath, newCfgDataPath), []byte(content), 0644)
-			fmt.Println("文件: ", fileName, "sheet name 替换", countName, "次，cell text 替换", countText, "次")
+			fmt.Printf("文件: %50s sheet name 替换 %6d 次，cell text 替换 %6d 次\n", fileName, countName, countText)
+
 		}
 	}
 	defer wg.Done()
