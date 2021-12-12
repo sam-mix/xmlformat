@@ -8,6 +8,7 @@ import (
 	"regexp"
 	"strings"
 	"sync"
+	"sync/atomic"
 	"time"
 
 	"github.com/xuri/excelize/v2"
@@ -54,9 +55,11 @@ var (
 	rulesSheetNameList = [4]string{sheetText, sheetCell, sheetSheetNameContains, sheetSheetName} // 替换规则配置文件sheet名列表
 	rules              = make(map[string]map[string]r)                                           // map[替换规则文件中的sheet名称]map[待替换内容]替换规则
 	wg                 sync.WaitGroup                                                            // 同步机制 等待组
-	allXmlPath         = make([]string, 0)
-	cellReg            = regexp.MustCompile(stringCellDataRegStr)
-	sheetNameReg       = regexp.MustCompile(sheetNameRegStr)
+	allXmlPath                                                                                   = make([]string, 0)
+	cellReg                                                                                      = regexp.MustCompile(stringCellDataRegStr)
+	sheetNameReg                                                                                 = regexp.MustCompile(sheetNameRegStr)
+	total              uint64                                                                    = 0
+	totalFile          uint64                                                                    = 0
 )
 
 func main() {
@@ -68,7 +71,7 @@ func main() {
 	replaceAll()
 
 	e := time.Since(s)
-	fmt.Printf("替换完成!共耗时 %f 秒 \n", e.Seconds())
+	fmt.Printf("替换完成,共于%d个文件替换%d处,共耗时%f秒\n", totalFile, total, e.Seconds())
 }
 
 func replaceAll() {
@@ -89,10 +92,12 @@ func replace(filePath string, waitGroup *sync.WaitGroup) {
 		shortFileName := strings.ReplaceAll(fileName, cfgDataFilesuffix, "")
 		content, countName := replaceSheetName(shortFileName, content)
 		content, countText := replaceText(shortFileName, content)
-		if (countName + countText) > 0 {
+		count := countName + countText
+		if count > 0 {
 			ioutil.WriteFile(strings.ReplaceAll(filePath, oldCfgDataPath, newCfgDataPath), []byte(content), 0644)
-			fmt.Printf("文件: %50s sheet name 替换 %6d 次，cell text 替换 %6d 次\n", fileName, countName, countText)
-
+			fmt.Printf("文件: %50s sheet name 替换 %6d 处，cell text 替换 %6d 处\n", fileName, countName, countText)
+			atomic.AddUint64(&total, uint64(count))
+			atomic.AddUint64(&totalFile, 1)
 		}
 	}
 	defer wg.Done()
