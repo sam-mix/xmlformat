@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	//"github.com/zouhuigang/xmlformat"
-	"./xmlformat"
+	"xmlformat"
 )
 
 func main2() {

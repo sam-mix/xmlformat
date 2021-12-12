@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>yeahoo</Author>
+  <LastAuthor>China</LastAuthor>
+  <Created>2012-11-23T10:44:21Z</Created>
+  <LastSaved>2018-03-20T17:42:55Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>9615</WindowHeight>
+  <WindowWidth>22470</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="9" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#3F3F3F"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#3F3F3F"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="9" ss:Color="#FF6600"
+    ss:Bold="1"/>
+   <Interior ss:Color="#FFEB9C" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="月活跃度奖励">
+  <Table ss:ExpandedColumnCount="12" ss:ExpandedRowCount="2" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s62" ss:DefaultColumnWidth="75.75"
+   ss:DefaultRowHeight="13.5">
+   <Row ss:AutoFitHeight="0" ss:StyleID="s63">
+    <Cell><Data ss:Type="String">期号</Data></Cell>
+    <Cell><Data ss:Type="String">日期</Data><Comment ss:Author="神域"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40">格式为:{Year, Month, Day, Hour, Minute, Second}</ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="String">活跃需求1</Data></Cell>
+    <Cell><Data ss:Type="String">奖励道具1</Data><Comment ss:Author="神域"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40">格式为：{物品ID, 是否绑定, 数量}</ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="String">奖励名1</Data></Cell>
+    <Cell><Data ss:Type="String">图标id1</Data></Cell>
+    <Cell><Data ss:Type="String">描述1</Data></Cell>
+    <Cell><Data ss:Type="String">活跃需求2</Data></Cell>
+    <Cell><Data ss:Type="String">奖励道具2</Data><Comment ss:Author="神域"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40">格式为：{物品ID, 是否绑定, 数量}</ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="String">奖励名2</Data></Cell>
+    <Cell><Data ss:Type="String">图标id2</Data></Cell>
+    <Cell><Data ss:Type="String">描述2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{2018,3,16,5,0,0}</Data></Cell>
+    <Cell><Data ss:Type="Number">400</Data></Cell>
+    <Cell><Data ss:Type="String">{27010,1,1}</Data></Cell>
+    <Cell><Data ss:Type="String">孜孜不倦礼盒</Data></Cell>
+    <Cell><Data ss:Type="Number">27010</Data></Cell>
+    <Cell><Data ss:Type="String">周活跃度达到&lt;color='#ffff00'&gt;400&lt;/color&gt;，打开即可获得&lt;color='#ffff00'&gt;丰厚奖励&lt;/color&gt;</Data></Cell>
+    <Cell><Data ss:Type="Number">800</Data></Cell>
+    <Cell><Data ss:Type="String">{27011,1,1}</Data></Cell>
+    <Cell><Data ss:Type="String">全勤达人礼盒</Data></Cell>
+    <Cell><Data ss:Type="Number">23255</Data></Cell>
+    <Cell><Data ss:Type="String">周活跃度达到&lt;color='#ffff00'&gt;800&lt;/color&gt;，打开即可获得&lt;color='#ffff00'&gt;珍稀奖励&lt;/color&gt;，并有&lt;color='#ffff00'&gt;概率&lt;/color&gt;获得&lt;color='#ffff00'&gt;永久时装&lt;/color&gt;哦</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Selected/>
+   <FreezePanes/>
+   <SplitHorizontal>1</SplitHorizontal>
+   <TopRowBottomPane>1</TopRowBottomPane>
+   <SplitVertical>1</SplitVertical>
+   <LeftColumnRightPane>2</LeftColumnRightPane>
+   <ActivePane>0</ActivePane>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+    </Pane>
+    <Pane>
+     <Number>1</Number>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+    <Pane>
+     <Number>2</Number>
+    </Pane>
+    <Pane>
+     <Number>0</Number>
+     <ActiveRow>4</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>C12,C2,C7,C4:C5,C9:C10</Range>
+   <Type>TextLength</Type>
+   <Min>0</Min>
+   <Max>65535</Max>
+   <ErrorMessage>文本内容大长(0 ~ 9999999999)</ErrorMessage>
+   <ErrorTitle>输入有误</ErrorTitle>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>C11,C8,C6,C3,C1</Range>
+   <Type>Whole</Type>
+   <Min>0</Min>
+   <Max>9999999999</Max>
+   <ErrorMessage>数值只能为(0 ~ 9999999999)</ErrorMessage>
+   <ErrorTitle>输入有误</ErrorTitle>
+  </DataValidation>
+ </Worksheet>
+</Workbook>
