@@ -68,7 +68,7 @@ func main() {
 	replaceAll()
 
 	e := time.Since(s)
-	fmt.Printf("共耗时 %f 秒 \n", e.Seconds())
+	fmt.Printf("替换完成!共耗时 %f 秒 \n", e.Seconds())
 }
 
 func replaceAll() {
@@ -79,7 +79,6 @@ func replaceAll() {
 		go replace(filePath, &wg)
 	}
 	wg.Wait()
-	fmt.Println("完成!")
 }
 
 // 替换
